@@ -1,0 +1,9 @@
+﻿ 
+html, body, input, select, textarea {
+            font-size: 1.05em;
+}
+
+p {
+    font-size: medium;
+    font-family: Tahoma;
+}

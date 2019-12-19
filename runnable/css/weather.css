@@ -1,0 +1,438 @@
+﻿
+/*
+body {
+  margin: 0;
+  padding: 0 0 30px;
+  background: #f1f1f1;
+  color: #555;
+  font-family: helvetica, sans-serif;
+}
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.header {
+  background: #5A78BB;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  min-height: 104px;
+}
+
+.header .left {
+  width: 65%;
+  display: block;
+  float:left;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  font-family: helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0 0 30px;
+  color: #5A78BB;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+.header h1 {
+  font-size: 36px;
+  text-align: left;
+  color: white;
+  margin: 0;
+}
+
+.header h1.time {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.header h1.location.no-time {
+  margin-top: 15px;
+}
+
+.hourly-wrapper h1 {
+  margin-top: 40px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+.placeholder {
+  height: 1px;
+}
+
+
+ul {
+  list-style-type: none;
+  font-family: helvetica, sans-serif;
+  padding-left: 0;
+  margin-top: 0px;
+}
+
+
+ul li {
+  font-size: 16px;
+  line-height: 1.4;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 5px 10px 3px;
+}
+
+ul li:first-child {
+  border-top: 1px solid #ccc;
+}
+
+ul li:nth-child(odd) {
+  background: #f8f8f8;
+}
+
+
+.wrapper {
+  width: 1188px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.row {
+  margin: 0 -15px;
+}
+
+.simple {
+  width: 25%;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.panel {
+  padding: 0 0 15px;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.panel h2, .panel h3, .panel h4 {
+  margin: 0 0 10px;
+  line-height: 1;
+}
+
+.panel h3 {
+  padding: 5px;
+  color: white;
+  background: #5A78BB;
+}
+
+.panel h4 {
+  margin-bottom: 1px;
+}
+
+.centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visible-xs {
+  display: none;
+}
+
+.graph {
+  padding: 0 15px;
+  float: left;
+}
+
+#graph {
+  min-width: 600px;
+}
+
+.sidebar,
+form {
+  width: 356px;
+  padding: 0 15px;
+  float: right;
+}
+
+input {
+  width: 100%;
+}
+
+input[type="text"] {
+  height: 32px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 8px;
+  margin-bottom: 0;
+  color: #444;
+
+}
+
+input[type="submit"] {
+  height: 32px;
+  font-size: 18px;
+  background: #5A78BB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#location-results {
+  position: absolute;
+  width: 296px;
+}
+
+table {
+  margin: 20px 0 30px;
+  background: white;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+table#three-day-weather {
+  margin-top: 0;
+}
+
+.hourly-wrapper table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.hourly-wrapper tr:nth-child(odd) {
+  background: #f4f4f4;
+}
+
+.hourly-wrapper th {
+  background: white;
+}
+
+.hourly-wrapper td,
+.hourly-wrapper th {
+  padding: 4px 10px;
+  border: 1px solid #5A78BB;
+  font-size: 1.2em;
+  color: #5A78BB;
+}
+
+#simple-forecast {
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 326px;
+  margin-top: 8px;
+}
+
+td:first-child {
+  border-right: none;
+  vertical-align: top;
+  padding: 5px 5px 2px;
+}
+
+td:last-child {
+  border-left: none;
+  padding: 5px;
+}
+
+td h3 {
+  margin: 0;
+}
+
+.icon {
+  text-align: center;
+}
+
+svg {
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  background: #fff;
+}
+
+.record-line {
+  stroke: #D65511;
+  stroke-width: 1px;
+}
+
+.record-text {
+  fill: #D65511;
+}
+
+.normal-line {
+  stroke: #5A78BB;
+  stroke-width: 1px;
+}
+
+.normal-text {
+  fill: #5A78BB;
+}
+
+.normal-rect {
+  fill: #f4f4f4;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #5A78BB;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+text.title,
+text.label {
+  font-family: helvetica;
+  fill: #5A78BB;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.label {
+  font-size: 16px;
+}
+
+.tick text {
+  font-family: helvetica;
+  fill: #5A78BB;
+  text-transform: lowercase;
+}
+
+.line {
+  fill: none;
+  stroke: #5A78BB;
+  stroke-width: 3px;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.footer p span {
+  position: relative;
+  top: -8px;
+}
+
+@media (max-width:1060px) and (min-width: 1023px) {
+  .panel h4 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1023px) {
+  
+  .header {
+    min-height: 199px;
+  }
+
+  .header .left {
+    float: none;
+    width: 100%;
+  }
+
+  .header h1 {
+    text-align: center;
+  }
+
+  form {
+    float: none;
+    margin: 20px auto;
+  }
+
+  .sidebar {
+    float: none;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  #three-day-weather {
+    margin-bottom: 0;
+  }
+
+  .graph {
+    width: 100%;
+    float: none;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .sidebar {
+    width: 100%;
+    float: none;
+  }
+
+  .graph {
+    float: none;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  body {
+    padding-top: 0;
+  }
+
+  .sidebar {
+    margin-top: 0;
+  }
+
+  .visible-xs {
+    display: block;
+  }
+
+  .header {
+    min-height: 181px;
+  }
+
+  .header h1.time {
+    font-size: 18px;
+  }
+
+  .header h1.location {
+    font-size: 28px;
+  }
+
+  svg,
+  #graph {
+    display: none;
+  }
+
+  #simple-forecast {
+    display: none;
+  }
+
+}

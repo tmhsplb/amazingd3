@@ -1,0 +1,31 @@
+﻿.bar  {
+  fill: steelblue;
+ } 
+
+.bar text { 
+  fill: white; 
+  font: 10px sans-serif;
+ /* text-anchor: end; */
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: white; /*#000;*/
+    shape-Rendering: crispEdges;
+}
+    
+ .y.axis path {
+    display: none;
+ }
+
+ p.slider {
+    border-style: solid;
+    border-width: 1px;
+    border-color: steelblue;
+}
+
+/* Affects row chart and bar chart labels */
+g {
+    font-size: small;
+}

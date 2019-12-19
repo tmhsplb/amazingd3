@@ -1,0 +1,14 @@
+﻿
+html, body, input, select, textarea {
+            font-size: 1.05em;
+}
+
+img {
+    float: left;
+    margin: 10px 10px 10px 10px;
+}
+
+p {
+    font-size: medium;
+    font-family: Tahoma;
+}

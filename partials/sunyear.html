@@ -1,0 +1,77 @@
+﻿  
+    <link rel="stylesheet" href="Content/styles/autocomplete.css" />
+    <div id=" explanation" style="background: white">
+        <p>
+            This example was suggested by Luke Franci on his website <a href="http://www.recursion.org/d3-for-mere-mortals/" target="_blank">D3 for Mere Mortals</a>. 
+            It is a custom visualization which cannot be produced by any commercial charting package. It shows the daylight hours for
+            the selected city for each day throughout the current year. Each axis makes use of a D3 time scale.
+            The example connects to two remote data sources: the autocomplete API provided by the Weather Underground (also used in the weather example)
+            and the Google Timezone API, which provides the hour offset from GMT for the selected city based on its latitude and
+            longitude. The example also uses a sunrise/sunset algorithm provided by a Web API belonging to this website.
+        </p>
+        <p>
+            There are 3 dashed lines running through the visualization. The two faint gray dashed lines represent the dates of
+            the spring anf fall equinoxes. The solid black dashed line represents today's date. The orange circle on today's date
+            line (if present) marks the time of today's sunrise. The yellow circle on today's date line marks today's midday, the 
+            time when the sun is directly overhead. (It is hard to see against the background of sunlight.) The red circle on today's 
+            date line (if present) marks the time of today's sunset. Times are not adjusted for daylight savings time.
+        </p>
+        <p>
+            Cities to try:
+            <ol>
+                <li>
+                    Alta, Norway in the land of the midnight sun, north of the arctic circle
+                </li>
+                <li>
+                    Quito, Ecuador close to the equator
+                </li>
+                <li>
+                    Sydney, Australia in the southern hemisphere
+                </li>
+            </ol>
+        </p>
+        <p>
+        This same visualization is used in the <a href="https://sunclock.apphb.com" target="_blank">Sunclock website.</a> The home page of the sunclock
+        website shows the so-called sunrise/sunset terminator which shows which parts of the earth are experiencing daytime and which
+        parts are experiencing nighttime at any given time.
+        </p>
+        <!--
+            http://stackoverflow.com/questions/11577712/hr-tag-in-twitter-bootstrap-not-functioning-correctly
+        -->
+        <div class="row">
+            <div class="span12">
+                <hr style="border-color: black" />
+            </div>
+        </div>
+    </div>
+      <table style="font-size: 14px;">
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>
+                <!-- <div class="wrapper clearfix"> -->
+                <div style="">
+                        <form name="location-input">
+                            <!--  <label>Try any city in the world:</label> -->
+                            <input type="text"
+                                   name="location"
+                                   id="location-input"
+                                   ng-model="Houston"
+                                   auto-fill="fetchCities"
+                                   placeholder="Type a city"
+                                   autocomplete="off">
+                           
+                            <div id="location-results"></div>
+                        </form>
+                </div>
+                <!-- </div> -->
+            </td>
+            <td>&nbsp;&nbsp;</td>
+            <td>Lon: {{longitude}}</td><td>&nbsp;&nbsp;</td><td>Lat: {{latitude}}</td><td>&nbsp;&nbsp;</td>
+            <td>Sunrise: {{sunrise}}</td><td>&nbsp;&nbsp;</td><td>Midday: {{midday}}</td><td>&nbsp;&nbsp;</td><td>Sunset: {{sunset}}</td>
+         </tr>
+        </table>
+
+        <div class="graph" style="font-size:10pt">
+            <svg height="400" width="802"></svg>
+        </div>
+ 
